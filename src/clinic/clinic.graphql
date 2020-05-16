@@ -1,0 +1,5 @@
+type Clinic {
+  id: ID!
+  name: String!
+  loginemail: String
+}

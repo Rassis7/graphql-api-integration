@@ -1,0 +1,29 @@
+type Query {
+  user(email: String, iduser: String): User!
+  users: [User!]
+}
+
+type Mutation {
+  createUser(input: CreateUserIput!): User!
+}
+
+type User {
+  iduser: ID!
+  clinics: [Clinic!]
+  email: String
+  # password: String!
+  # cryptographic_salt: String!
+  name: String!
+  phone: String!
+}
+
+input CreateUserIput {
+  name: String!
+  email: String!
+  sexo: SexEnum
+}
+
+enum SexEnum {
+  MALE
+  FEMALE
+}
